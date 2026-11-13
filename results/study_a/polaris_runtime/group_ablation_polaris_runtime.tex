@@ -1,0 +1,19 @@
+\begin{tabular}{lrr}
+\toprule
+setup & test_mae & change \\
+\midrule
+ALL features & 0.410 & 0.000 \\
+without size (walltime/nodes/core-hours) & 0.449 & 0.039 \\
+without core-hours only & 0.419 & 0.009 \\
+without group history & 0.464 & 0.055 \\
+without user history & 0.435 & 0.026 \\
+without executable history & 0.410 & 0.001 \\
+without categoricals & 0.418 & 0.008 \\
+ONLY size (walltime/nodes/core-hours) & 0.520 & 0.110 \\
+ONLY core-hours only & 0.560 & 0.150 \\
+ONLY group history & 0.485 & 0.075 \\
+ONLY user history & 0.559 & 0.150 \\
+ONLY executable history & 3.040 & 2.631 \\
+ONLY categoricals & 0.613 & 0.203 \\
+\bottomrule
+\end{tabular}

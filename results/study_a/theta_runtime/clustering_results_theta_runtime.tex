@@ -1,0 +1,9 @@
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+model & mae_log & med_ae_log & r2 & mdape & within_2x & cv_mae & k & alpha & m \\
+\midrule
+CatBoost alone (residual) & 0.305 & 0.138 & 0.865 & 0.139 & 0.873 & 0.388 & NaN & NaN & NaN \\
+Per-cluster Ridge + CatBoost (k=384, alpha=10, m=100) & 0.306 & 0.149 & 0.866 & 0.151 & 0.873 & 0.388 & 384.000 & 10.000 & 100.000 \\
+Per-cluster Ridge + CatBoost (k=136, alpha=100, m=100) [reference] & 0.386 & 0.244 & 0.832 & 0.237 & 0.864 & 0.401 & 136.000 & 100.000 & 100.000 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+model & cv_mae & mae_log & med_ae_log & r2 & mdape & within_2x \\
+\midrule
+LightGBM (residual, tuned) & 0.398 & 0.343 & 0.181 & 0.847 & 0.178 & 0.870 \\
+XGBoost (residual, tuned) & 0.401 & 0.356 & 0.209 & 0.849 & 0.203 & 0.863 \\
+CatBoost (residual, tuned) & 0.388 & 0.305 & 0.138 & 0.865 & 0.139 & 0.873 \\
+HistGradientBoosting (residual, tuned) & 0.435 & 0.405 & 0.267 & 0.837 & 0.266 & 0.857 \\
+\bottomrule
+\end{tabular}

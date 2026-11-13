@@ -1,0 +1,30 @@
+\begin{tabular}{llrrrrrr}
+\toprule
+model & mode & cv_mae & mae_log & med_ae_log & r2 & within_2x & train_time_sec \\
+\midrule
+Ensemble (top-3 by CV MAE) & ensemble & NaN & 0.867 & 0.265 & 0.805 & 0.676 & NaN \\
+SVR [direct] & direct & 0.711 & 0.875 & 0.275 & 0.804 & 0.670 & 933.612 \\
+HistGradientBoosting [residual] & residual & 0.753 & 0.878 & 0.246 & 0.794 & 0.675 & 91.965 \\
+SVR [residual] & residual & 0.720 & 0.878 & 0.264 & 0.797 & 0.672 & 914.186 \\
+HistGradientBoosting [direct] & direct & 0.808 & 0.880 & 0.303 & 0.806 & 0.658 & 93.304 \\
+XGBoost [residual] & residual & 0.777 & 0.888 & 0.293 & 0.803 & 0.666 & 55.851 \\
+XGBoost [direct] & direct & 0.937 & 0.898 & 0.305 & 0.810 & 0.659 & 52.036 \\
+Extra Trees [residual] & residual & 0.846 & 0.912 & 0.372 & 0.816 & 0.626 & 154.090 \\
+Extra Trees [direct] & direct & 0.909 & 0.938 & 0.393 & 0.812 & 0.618 & 142.697 \\
+KNN [residual] & residual & 0.858 & 0.939 & 0.370 & 0.802 & 0.613 & 140.019 \\
+Baseline: group last value & baseline & NaN & 0.943 & 0.154 & 0.718 & 0.702 & 0.000 \\
+Random Forest [residual] & residual & 0.995 & 0.955 & 0.378 & 0.815 & 0.622 & 1034.583 \\
+Random Forest [direct] & direct & 0.960 & 0.991 & 0.418 & 0.803 & 0.604 & 873.777 \\
+KNN [direct] & direct & 1.037 & 0.993 & 0.410 & 0.783 & 0.597 & 148.523 \\
+Lasso [residual] & residual & 0.882 & 0.998 & 0.341 & 0.784 & 0.622 & 17.701 \\
+Ridge [residual] & residual & 1.066 & 1.028 & 0.440 & 0.806 & 0.600 & 5.864 \\
+Ridge [direct] & direct & 1.099 & 1.035 & 0.449 & 0.805 & 0.597 & 8.502 \\
+Lasso [direct] & direct & 1.088 & 1.044 & 0.467 & 0.804 & 0.589 & 27.823 \\
+ElasticNet [direct] & direct & 1.094 & 1.048 & 0.471 & 0.804 & 0.587 & 27.255 \\
+ElasticNet [residual] & residual & 0.909 & 1.059 & 0.368 & 0.763 & 0.611 & 32.550 \\
+Baseline: group history mean & baseline & NaN & 1.064 & 0.386 & 0.753 & 0.602 & 0.000 \\
+Baseline: user history mean & baseline & NaN & 1.261 & 0.606 & 0.700 & 0.525 & 0.000 \\
+Baseline: requested walltime (scaled) & baseline & NaN & 2.767 & 2.430 & 0.328 & 0.069 & 0.000 \\
+Baseline: global train mean & baseline & NaN & 3.423 & 3.618 & -0.013 & 0.067 & 0.000 \\
+\bottomrule
+\end{tabular}

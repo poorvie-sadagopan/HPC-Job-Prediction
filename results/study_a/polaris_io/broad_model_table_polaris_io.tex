@@ -1,0 +1,29 @@
+\begin{tabular}{llrrrrrr}
+\toprule
+model & mode & cv_mae & mae_log & med_ae_log & r2 & within_2x & train_time_sec \\
+\midrule
+SVR [residual] & residual & 0.717 & 0.953 & 0.614 & 0.660 & 0.527 & 4.949 \\
+Ensemble (top-3 by CV MAE) & ensemble & NaN & 0.971 & 0.626 & 0.656 & 0.533 & NaN \\
+Ridge [residual] & residual & 0.884 & 0.981 & 0.656 & 0.650 & 0.522 & 0.953 \\
+HistGradientBoosting [residual] & residual & 0.724 & 0.994 & 0.633 & 0.632 & 0.542 & 30.637 \\
+XGBoost [residual] & residual & 0.755 & 0.995 & 0.638 & 0.635 & 0.531 & 12.040 \\
+SVR [direct] & direct & 0.901 & 0.995 & 0.618 & 0.632 & 0.558 & 5.440 \\
+Extra Trees [residual] & residual & 0.715 & 1.009 & 0.624 & 0.636 & 0.537 & 14.918 \\
+KNN [residual] & residual & 0.672 & 1.018 & 0.643 & 0.633 & 0.521 & 1.803 \\
+Baseline: group last value & baseline & NaN & 1.022 & 0.534 & 0.521 & 0.547 & 0.000 \\
+Random Forest [direct] & direct & 1.168 & 1.035 & 0.773 & 0.663 & 0.466 & 33.020 \\
+Extra Trees [direct] & direct & 1.077 & 1.046 & 0.778 & 0.653 & 0.454 & 14.280 \\
+Baseline: group history mean & baseline & NaN & 1.054 & 0.613 & 0.551 & 0.543 & 0.000 \\
+Random Forest [residual] & residual & 0.906 & 1.069 & 0.694 & 0.606 & 0.499 & 49.115 \\
+HistGradientBoosting [direct] & direct & 1.146 & 1.073 & 0.756 & 0.633 & 0.470 & 31.347 \\
+ElasticNet [residual] & residual & 0.808 & 1.082 & 0.684 & 0.555 & 0.511 & 1.952 \\
+Lasso [residual] & residual & 0.810 & 1.082 & 0.684 & 0.555 & 0.511 & 1.689 \\
+XGBoost [direct] & direct & 1.000 & 1.134 & 0.797 & 0.602 & 0.448 & 12.951 \\
+KNN [direct] & direct & 1.110 & 1.190 & 0.909 & 0.588 & 0.402 & 1.915 \\
+ElasticNet [direct] & direct & 0.914 & 1.209 & 0.875 & 0.568 & 0.402 & 4.045 \\
+Baseline: user history mean & baseline & NaN & 1.218 & 0.740 & 0.496 & 0.450 & 0.000 \\
+Lasso [direct] & direct & 0.909 & 1.402 & 1.155 & 0.475 & 0.313 & 4.116 \\
+Baseline: global train mean & baseline & NaN & 2.040 & 1.643 & -0.047 & 0.347 & 0.000 \\
+Ridge [direct] & direct & 0.935 & 2.331 & 2.461 & -0.205 & 0.197 & 3.453 \\
+\bottomrule
+\end{tabular}
