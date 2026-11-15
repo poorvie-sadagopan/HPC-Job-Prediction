@@ -58,3 +58,9 @@ pip install -r requirements.txt
 
 - **Study A:** features are the request plus the history of earlier finished jobs of the same group (user, project, walltime, nodes). When fewer than three such jobs exist, the group is widened step by step. 14 model variants are compared in direct and residual mode; tuned CatBoost is used as one fixed model. K-means clusters and contention features are tested on top.
 - **Study B:** only the first *k* bins are used, with a leakage check (scrambling later bins must not change the features). Four feature sets (totals, shape, segments, raw) with optional context features, ten models, five-fold expanding-window CV. The operating point is the smallest *k* whose CV MAE is within 10% of the all-bins value (*k* = 50).
+
+## Acknowledgements
+
+I thank Prof. Preeti Malakar for her guidance and feedback. The Theta and Polaris logs are from the Argonne Leadership Computing Facility, and the Param log is from the Param supercomputer.
+
+**Use of AI tools:** Claude (Anthropic) was used to help write and debug code, draft and edit the report and presentation text, create figures and format the report. All experiments were run by me, and I reviewed and take responsibility for the results and content.
